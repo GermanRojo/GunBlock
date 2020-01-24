@@ -1,1 +1,6 @@
 https://towardsdatascience.com/plug-and-play-object-detection-code-in-5-simple-steps-f1975804373e
+
+A great tool for image annotations: http://www.robots.ox.ac.uk/~vgg/software/via/via.html
+
+A source of gun images:
+git@github.com:SasankYadati/Guns-Dataset.git
