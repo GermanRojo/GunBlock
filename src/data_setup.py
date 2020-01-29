@@ -5,10 +5,10 @@ from glob import glob
 import json
 
 # Path to our images
-image_paths = glob("../images/*")
+image_paths = glob("../images-edwardo/*")
 
 # Path to JSON annotation file from the VIA tool
-annotation_file = '../GunBlock-annotations.json'
+annotation_file = '../GunBlock-edwardo-200.json'
 
 # Clean up the annotations a little:
 # - remove all the VIA app settings and attribute definition bits from 
