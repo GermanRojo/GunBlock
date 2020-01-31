@@ -1,0 +1,5 @@
+Run the data_setup.py script as
+$ python3 data_setup.py
+
+Next, tar up the gundata/ directory and move it into the GunBlock model section 
+of the Mask_RCNN code.

@@ -1,0 +1,11 @@
+The following are the image directories used for the project.
+
+These four are the images provided by the individual team members:
+./images-edwardo
+./images-german
+./images-oscar
+./images-gunter
+
+The master image directory is "images". Images are moved into this directory
+only after they have annotated and the annotations have been merged
+into the master annotation (JSON) file.
