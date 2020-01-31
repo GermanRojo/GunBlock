@@ -1,8 +1,0 @@
-The following are the image directories used for the project.
-./images-edwardo
-  Images provided by Edwardo 
-./images-german
-  Images provided by German
-./images
-  These are the images that have actually been annotated for use with the neural net. They
-  match the images found in the master annotation file, GunBlock-polygons-358.json
