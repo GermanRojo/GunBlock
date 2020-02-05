@@ -15,7 +15,7 @@ import json
 image_paths = glob("../images/*")
 
 # Path to JSON annotation file from the VIA tool
-annotation_file = '../GunBlock-polygons-358.json'
+annotation_file = '../GunBlock-polygons-500.json'
 
 # Clean up the annotations a little:
 # - remove all the VIA app settings and attribute definition bits from 
