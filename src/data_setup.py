@@ -3,24 +3,39 @@
 # Mask_RCNN neural network model
 #
 # Run it from this directory as
-#   python3 data_setup.py
+#   python data_setup.py --afile <name of annotation file> [--path <optional path to GunBlockModel dir]
 
 from random import random
 import os
 from pathlib import Path
 from glob import glob
 import json
+import argparse
+
+# parse input arguments
+parser = argparse.ArgumentParser(
+        description='Split the annoated images up into a training and validation set')
+parser.add_argument('--afile', required=True, dest='afile',
+                    metavar='<annotation file>', 
+                    help="Name of annotation file.")
+parser.add_argument('--path', dest='modelpath', 
+                    default="../",
+                    help='Path to the GunBlockModel directory.')
+
+args = parser.parse_args()
 
 # Path to our images
-image_paths = glob("../images/*")
+image_paths = glob(args.modelpath + "images/*")
 
 # Path to JSON annotation file from the VIA tool
-annotation_file = '../GunBlock-polygons-358.json'
+#annotation_file = '../GunBlock-polygons-564.json'
+afile = args.modelpath+args.afile
+print("afile = " + afile)
 
 # Clean up the annotations a little:
 # - remove all the VIA app settings and attribute definition bits from 
 #   the attribution editor settings
-annotations = json.load(open(annotation_file))
+annotations = json.load(open(afile))
 cleaned_annotations = {}
 for k,v in annotations['_via_img_metadata'].items():
     cleaned_annotations[v['filename']] = v
